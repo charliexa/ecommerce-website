@@ -10,7 +10,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
             <div class="bg-white p-3 shadow rounded-lg md:col-span-2">
                 <form x-data="{
-                    {{-- countries: {{ json_encode($countries) }}, --}}
+                    countries: {{ json_encode($countries) }},
                     billingAddress: {{ json_encode([
                         'address1' => old('billing.address1', $billingAddress->address1),
                         'address2' => old('billing.address2', $billingAddress->address2),
@@ -120,12 +120,12 @@
                             />
                         </div>
                     </div>
-                    {{-- <div class="grid grid-cols-2 gap-3 mb-3">
+                    <div class="grid grid-cols-2 gap-3 mb-3">
                         <div>
                             <x-input type="select"
-                                     name="billing[country_code]"
-                                     x-model="billingAddress.country_code"
-                                     class="w-full focus:border-purple-600 focus:ring-purple-600 border-gray-300 rounded">
+                                    name="billing[country_code]"
+                                    x-model="billingAddress.country_code"
+                                    class="w-full focus:border-purple-600 focus:ring-purple-600 border-gray-300 rounded">
                                 <option value="">Select Country</option>
                                 <template x-for="country of countries" :key="country.code">
                                     <option :selected="country.code === billingAddress.country_code"
@@ -136,12 +136,12 @@
                         <div>
                             <template x-if="billingCountryStates">
                                 <x-input type="select"
-                                         name="billing[state]"
-                                         x-model="billingAddress.state"
-                                         class="w-full focus:border-purple-600 focus:ring-purple-600 border-gray-300 rounded">
+                                        name="billing[state]"
+                                        x-model="billingAddress.state"
+                                        class="w-full focus:border-purple-600 focus:ring-purple-600 border-gray-300 rounded">
                                     <option value="">Select State</option>
                                     <template x-for="[code, state] of Object.entries(billingCountryStates)"
-                                              :key="code">
+                                            :key="code">
                                         <option :selected="code === billingAddress.state"
                                                 :value="code" x-text="state"></option>
                                     </template>
@@ -157,7 +157,7 @@
                                 />
                             </template>
                         </div>
-                    </div> --}}
+                    </div>
 
                     <div class="flex justify-between mt-6 mb-2">
                         <h2 class="text-xl font-semibold">Shipping Address</h2>
@@ -207,12 +207,12 @@
                             />
                         </div>
                     </div>
-                    {{-- <div class="grid grid-cols-2 gap-3 mb-3">
+                    <div class="grid grid-cols-2 gap-3 mb-3">
                         <div>
                             <x-input type="select"
-                                     name="shipping[country_code]"
-                                     x-model="shippingAddress.country_code"
-                                     class="w-full focus:border-purple-600 focus:ring-purple-600 border-gray-300 rounded">
+                                    name="shipping[country_code]"
+                                    x-model="shippingAddress.country_code"
+                                    class="w-full focus:border-purple-600 focus:ring-purple-600 border-gray-300 rounded">
                                 <option value="">Select Country</option>
                                 <template x-for="country of countries" :key="country.code">
                                     <option :selected="country.code === shippingAddress.country_code"
@@ -223,12 +223,12 @@
                         <div>
                             <template x-if="shippingCountryStates">
                                 <x-input type="select"
-                                         name="shipping[state]"
-                                         x-model="shippingAddress.state"
-                                         class="w-full focus:border-purple-600 focus:ring-purple-600 border-gray-300 rounded">
+                                        name="shipping[state]"
+                                        x-model="shippingAddress.state"
+                                        class="w-full focus:border-purple-600 focus:ring-purple-600 border-gray-300 rounded">
                                     <option value="">Select State</option>
                                     <template x-for="[code, state] of Object.entries(shippingCountryStates)"
-                                              :key="code">
+                                            :key="code">
                                         <option :selected="code === shippingAddress.state"
                                                 :value="code" x-text="state"></option>
                                     </template>
@@ -244,7 +244,7 @@
                                 />
                             </template>
                         </div>
-                    </div> --}}
+                    </div>
 
                     <x-button class="w-full">Update</x-button>
                 </form>
