@@ -24,7 +24,7 @@ class ProfileController extends Controller
     $shippingAddress = $customer->shippingAddress()->firstOrNew(['type' => AddressType::Shipping]);
     $billingAddress = $customer->billingAddress()->firstOrNew(['type' => AddressType::Billing]);
 
-    $countries = Country::orderBy('name')->get();
+    $countries = Country::query()->orderBy('name')->get();
 
     return view('profile.view', compact('customer', 'user', 'shippingAddress', 'billingAddress', 'countries'));
 }
