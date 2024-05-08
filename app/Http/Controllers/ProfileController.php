@@ -14,17 +14,20 @@ use Illuminate\Support\Facades\Password;
 class ProfileController extends Controller
 {
     public function view(Request $request)
-    {
-        /** @var \App\Models\User $user */
-        $user = $request->user();
-        /** @var \App\Models\Customer $customer */
-        $customer = $user->customer();
-        $shippingAddress = $customer->shippingAddress ?: new CustomerAddress(['type' => AddressType::Shipping]);
-        $billingAddress = $customer->billingAddress ?: new CustomerAddress(['type' => AddressType::Billing]);
-//        dd($customer, $shippingAddress->attributesToArray(), $billingAddress, $billingAddress->customer);
-        $countries = Country::query()->orderBy('name')->get();
-        return view('profile.view', compact('customer', 'user', 'shippingAddress', 'billingAddress', 'countries'));
-    }
+{
+    /** @var \App\Models\User $user */
+    $user = $request->user();
+
+    /** @var \App\Models\Customer $customer */
+    $customer = $user->customer()->first(); // Retrieve the customer instance
+
+    $shippingAddress = $customer->shippingAddress()->firstOrNew(['type' => AddressType::Shipping]);
+    $billingAddress = $customer->billingAddress()->firstOrNew(['type' => AddressType::Billing]);
+
+    $countries = Country::orderBy('name')->get();
+
+    return view('profile.view', compact('customer', 'user', 'shippingAddress', 'billingAddress', 'countries'));
+}
 
     public function store(ProfileRequest $request)
     {
