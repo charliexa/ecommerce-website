@@ -15,8 +15,8 @@
       </div>
       <div>
         <input v-model="search" @change="getOrders(null)"
-               class="appearance-none relative block w-48 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-               placeholder="Type to Search orders">
+                class="appearance-none relative block w-48 px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                placeholder="Type to Search orders">
       </div>
     </div>
 
@@ -30,19 +30,19 @@
           Customer
         </TableHeaderCell>
         <TableHeaderCell field="status" :sort-field="sortField" :sort-direction="sortDirection"
-                         @click="sortOrders('status')">
+                          @click="sortOrders('status')">
           Status
         </TableHeaderCell>
         <TableHeaderCell field="total_price" :sort-field="sortField" :sort-direction="sortDirection"
-                         @click="sortOrders('total_price')">
+                          @click="sortOrders('total_price')">
           Price
         </TableHeaderCell>
         <TableHeaderCell field="created_at" :sort-field="sortField" :sort-direction="sortDirection"
-                         @click="sortOrders('created_at')">
+                          @click="sortOrders('created_at')">
           Date
         </TableHeaderCell>
         <TableHeaderCell field="actions">
-          Actions
+          Delivered?
         </TableHeaderCell>
       </tr>
       </thead>
