@@ -1,13 +1,27 @@
+<style>
+.css2{
+    color:white;
+    font-size:30px;
+    background-color: darkblue;
+    font-family: Leelawadee UI Semilight;
+    font-style:italic;
+    font-weight:600;
+    letter-spacing: 3px;
+}
+</style>
+<div style="background-color: darkblue;">
+    <marquee class="css2" direction="left">sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold</marquee>
+</div>
 <header
     x-data="{
         mobileMenuOpen: false,
         cartItemsCount: {{ \App\Helpers\Cart::getCartItemsCount() }},
     }"
     @cart-change.window="cartItemsCount = $event.detail.count"
-    class="flex justify-between bg-slate-800 shadow-md text-white"
+    class="flex justify-between bg-neutral-800 shadow-md text-white items-center box-border sm:px-10"
 >
     <div>
-        <a href="{{ route('home') }}" class="block py-navbar-item pl-5"> Logo </a>
+        <a href="{{ route('home') }}" class="block py-navbar-item pl-5 sm:text-xl mr-2 text-sm"> XStore </a>
     </div>
     <!-- Responsive Menu -->
     <div
@@ -194,12 +208,38 @@
         </ul>
     </div>
     <!--/ Responsive Menu -->
+    <p class="w-[120px] hidden lg:flex">
+        Available 24/7 at
+        Mohammedia
+    </p>
+    <form action="" class="relative">
+        <input type="text" class="rounded-full w-[50vw] sm:w-[28vw] h-[30px] sm:h-[40px] text-black">
+        <button type="submit" class="absolute right-2 sm:right-3 top-[4px] sm:top-2 text-gray-900">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
     <nav class="hidden md:block">
-        <ul class="grid grid-flow-col items-center">
+        <ul class="flex items-center justify-center">
             <li>
                 <a
                     href="{{ route('cart.index') }}"
-                    class="relative inline-flex items-center py-navbar-item px-navbar-item hover:bg-slate-900"
+                    class="relative inline-flex items-center py-navbar-item px-[5px] hover:bg-slate-900 gap-1"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    Wish Lists
+                    <small
+                        x-show="cartItemsCount"
+                        x-transition
+                        x-cloak
+                        x-text="cartItemsCount"
+                        class="absolute z-[100] top-4 -right-3 py-[2px] px-[8px] rounded-full bg-red-500"
+                    ></small>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="{{ route('cart.index') }}"
+                    class="relative inline-flex items-center py-navbar-item px-[5px] hover:bg-slate-900"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +269,7 @@
                 <li x-data="{open: false}" class="relative">
                     <a
                         @click="open = !open"
-                        class="cursor-pointer flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900"
+                        class="cursor-pointer flex items-center py-navbar-item px-[5px] pr-5 hover:bg-slate-900"
                     >
               <span class="flex items-center">
                 <svg
@@ -343,8 +383,8 @@
             @else
                 <li>
                     <a
-                        href="{{ route('login') }}"
-                        class="flex items-center py-navbar-item px-navbar-item hover:bg-slate-900"
+                        href="{{ route('register') }}"
+                        class="flex items-center py-navbar-item px-[5px] hover:bg-slate-900"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -360,15 +400,16 @@
                                 d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                             />
                         </svg>
-                        Login
+                        Register
                     </a>
                 </li>
                 <li>
                     <a
-                        href="{{ route('register') }}"
-                        class="inline-flex items-center text-white bg-emerald-600 py-2 px-3 rounded shadow-md hover:bg-emerald-700 active:bg-emerald-800 transition-colors mx-5"
+                        href="{{ route('login') }}"
+                        class="flex items-center py-navbar-item px-[5px] hover:bg-slate-900 gap-1"
                     >
-                        Register now
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/><circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/></svg>
+                    Login
                     </a>
                 </li>
             @endif
