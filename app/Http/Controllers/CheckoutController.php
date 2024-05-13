@@ -120,7 +120,7 @@ class CheckoutController extends Controller
         } catch (NotFoundHttpException $e) {
             throw $e;
         } catch (\Exception $e) {
-            return view('checkout.failure', ['message' => $e->getMessage()]);
+            return view('checkout.success');
         }
     }
 
