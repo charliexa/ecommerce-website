@@ -111,7 +111,15 @@
                         <div class="Availability">Availability: In Stock</div>
                     </div>
                 </div>
-                <div class="price fw-bolder fs-4 text-black">${{ $product->price }}</div>
+                <div class="price fw-bolder fs-4 text-black">
+                    {{-- IF THE PRICE IS THE SAME AS THE ORIGINAL::::: --}}
+                    {{-- <div class="price-last">${{ $product->price }}</div> --}}
+                    {{-- IF THE PRICE IS ON SALE:::::::... --}}
+                    <div class="price-compare flex gap-2">
+                        <dd class="price-original">${{ $product->price }}</dd>
+                        <div class="price-last">${{ $product->price }}</div>
+                    </div>
+                </div>
                 {{-- YOU SHOULD ADD AN IF STATMENT PROVVIDED WITH A VARIABLE FROM THE CONTROLLER  --}}
                 <div class="warning text-danger fw-bold">Please hurry! Only 8 left in stock</div>
                 <div class="size ">
@@ -161,6 +169,7 @@
                         </svg>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
