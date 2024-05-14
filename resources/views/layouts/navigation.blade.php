@@ -8,8 +8,11 @@
     font-weight:600;
     letter-spacing: 3px;
 }
+.bgImage{
+    background-image: url();
+}
 </style>
-<div style="background-color: darkblue;">
+<div style="background-color: darkblue;" class="bgImage">
     <marquee class="css2" direction="left">sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold</marquee>
 </div>
 <header
