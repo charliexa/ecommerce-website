@@ -94,7 +94,7 @@
             </div>
         </div>
     </div> --}}
-    <div class="container-fluid">
+    <div class="container">
         <div class="row gap-4">
             <div class="col text-center">
                 <img src="{{ $product->image }}" alt="{{ $product->title }}">
@@ -147,11 +147,11 @@
                     <input type="number" name="quantity" x-ref="quantityEl" value="1" min="1"
                         class="w-32 focus:border-purple-500 focus:outline-none rounded" />
                 </div>
-                <div class="flex flex-row align-items-center justify-center gap-3">
-                    <button class="btn bg-dark py-2 text-white fs-4 flex justify-center min-w-0 w-full rounded-5">
+                <div class="flex flex-row align-items-center justify-center gap-3 mr-4">
+                    <button class="btn bg-dark py-2 text-white fs-4 flex justify-center min-w-0 w-full rounded-5 ">
                         Add to Cart
                     </button>
-                    <div class="border-1 flex items-center justify-center p-2 text-center border-gray-300 text-gray-400 rounded-full ">
+                    <div class="border-1 flex items-center justify-center p-2 text-center border-gray-300 text-gray-400 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
                             fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" class=""
                             stroke-linejoin="round">
