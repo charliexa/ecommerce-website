@@ -7,20 +7,13 @@
         font-weight: 600;
         letter-spacing: 3px;
     }
-
     .slider {
         background-image: url("http://localhost:8000/storage/images/bg-slider/background_slider.jpg");
         height: fit-content;
     }
 </style>
 <div class="slider flex">
-    <marquee class="css2" direction="left">sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
-        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
-        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
-        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
-        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
-        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
-        sold sold sold sold sold sold sold sold sold sold sold</marquee>
+    <marquee class="css2" direction="left">sold sold sold </marquee>
 </div>
 <header x-data="{
     mobileMenuOpen: false,
