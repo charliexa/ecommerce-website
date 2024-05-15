@@ -9,7 +9,7 @@
     }
 
     .slider {
-        background-image: url("http://localhost:8000/storage/images/bg-slider/bg-top-bar-promotion-home-7_2048x.avif");
+        background-image: url("http://localhost:8000/storage/images/bg-slider/background_slider.jpg");
         height: fit-content;
     }
 </style>
@@ -56,9 +56,8 @@
         </div>
     </div>
     <!-- serachMenu -->
-
     <div>
-        <a href="{{ route('home') }}" class="block py-navbar-item sm:text-xl text-2xl ml-[100%] sm:ml-0"> XStore </a>
+        <a href="{{ route('home') }}" class="block py-navbar-item sm:text-xl text-2xl ml-[40%] sm:ml-0"> XStore </a>
     </div>
     <!-- Responsive Menu -->
     <div
@@ -480,145 +479,6 @@
             class="absolute z-[100] top-4 -right-3 py-[2px] px-[8px] rounded-full bg-red-500"
         ></small>
     </a>
-    @if (!Auth::guest())
-    <div x-data="{open: false}" class="relative">
-        <a
-            @click="open = !open"
-            class="cursor-pointer flex items-center py-navbar-item px-[5px] pr-5 hover:bg-slate-900"
-        >
-    <span class="flex items-center">
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 mr-2"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        stroke-width="2"
-    >
-        <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-        />
-    </svg>
-    My Account
-    </span>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 ml-2"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-            >
-                <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                />
-            </svg>
-        </a>
-        <ul
-            @click.outside="open = false"
-            x-show="open"
-            x-transition
-            x-cloak
-            class="absolute z-10 right-0 bg-slate-800 py-2 w-48"
-        >
-            <li>
-                <a
-                    href="{{ route('profile') }}"
-                    class="flex px-3 py-2 hover:bg-slate-900"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        />
-                    </svg>
-                    My Profile
-                </a>
-            </li>
-            <li>
-                <a
-                    href="{{ route('order.index') }}"
-                    class="flex px-3 py-2 hover:bg-slate-900"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                        />
-                    </svg>
-                    My Orders
-                </a>
-            </li>
-            <li>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <a href="{{ route('logout') }}"
-                        class="flex px-3 py-2 hover:bg-slate-900"
-                        onclick="event.preventDefault();
-                            this.closest('form').submit();">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5 mr-2"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                            />
-                        </svg>
-                        {{ __('Log Out') }}
-                    </a>
-                </form>
-            </li>
-        </ul>
-    </div>
-    @else
-    <div>
-        <a
-            href="{{ route('register') }}"
-            class="flex items-center py-navbar-item px-[5px] hover:bg-slate-900"
-        >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-                />
-            </svg>
-            Register
-        </a>
-    </div>
-    @endif
     </div>
     <!-- <button
         @click="mobileMenuOpen = !mobileMenuOpen"
