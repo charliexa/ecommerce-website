@@ -23,6 +23,33 @@
         sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
         sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
     </marquee>
+    <marquee class="css2" direction="left">
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+    </marquee>
+    <marquee class="css2" direction="left">
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+    </marquee>
+    <marquee class="css2" direction="left">
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+    </marquee>
 </div>
 <header x-data="{
     mobileMenuOpen: false,
