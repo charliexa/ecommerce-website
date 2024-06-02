@@ -34,7 +34,7 @@
     <button @click="mobileSearchOpen = !mobileSearchOpen" class="flex text-xl md:hidden"><i class="fa-solid fa-magnifying-glass"></i></button>
     <!-- serachMenu -->
     <div
-    class="-left-full block fixed z-10 top-0 bottom-0 height h-full w-[80vw] bg-slate-900 md:hidden p-2"
+    class="-left-full block fixed z-20 top-0 bottom-0 height h-full w-[80vw] bg-slate-900 md:hidden p-2"
     :class="mobileSearchOpen ? 'left-0' : '-left-[100%]'"
     >
         <div class="relative">
@@ -60,7 +60,7 @@
     <!-- serachMenu -->
 
     <div>
-        <a href="{{ route('home') }}" class="block py-navbar-item sm:text-xl text-2xl ml-[40%] sm:ml-0"> XStore </a>
+        <a href="{{ route('home') }}" class="block py-3 sm:text-xl text-2xl ml-[40%] lg:ml-0"> XStore </a>
     </div>
     <!-- Responsive Menu -->
     <div
@@ -262,7 +262,7 @@
             <li>
                 <a
                     href="{{ route('cart.index') }}"
-                    class="relative inline-flex items-center py-navbar-item px-[5px] hover:bg-slate-900 gap-1"
+                    class="relative inline-flex items-center py-3 px-[5px] hover:bg-slate-900 gap-1"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                     Wish Lists
@@ -278,7 +278,7 @@
             <li>
                 <a
                     href="{{ route('cart.index') }}"
-                    class="relative inline-flex items-center py-navbar-item px-[5px] hover:bg-slate-900"
+                    class="relative inline-flex items-center py-3 px-[5px] hover:bg-slate-900"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -308,7 +308,7 @@
                 <li x-data="{open: false}" class="relative">
                     <a
                         @click="open = !open"
-                        class="cursor-pointer flex items-center py-navbar-item px-[5px] pr-5 hover:bg-slate-900"
+                        class="cursor-pointer flex items-center py-3 px-[5px] pr-5 hover:bg-slate-900"
                     >
               <span class="flex items-center">
                 <svg
@@ -423,7 +423,7 @@
                 <li>
                     <a
                         href="{{ route('register') }}"
-                        class="flex items-center py-navbar-item px-[5px] hover:bg-slate-900"
+                        class="flex items-center py-3 px-[5px] hover:bg-slate-900"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -445,7 +445,7 @@
                 <li>
                     <a
                         href="{{ route('login') }}"
-                        class="flex items-center py-navbar-item px-[5px] hover:bg-slate-900 gap-1"
+                        class="flex items-center py-3 px-[5px] hover:bg-slate-900 gap-1"
                     >
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/><circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/></svg>
                     Login
@@ -456,7 +456,7 @@
     </nav>
     <div class="flex items-center gap-3 md:hidden">
     <a
-        class="relative inline-flex items-center py-navbar-item hover:bg-slate-900"
+        class="relative inline-flex items-center px-2 py-3 hover:bg-slate-900"
         href="{{ route('cart.index') }}"
     >
         <svg
@@ -483,5 +483,9 @@
         ></small>
     </a>
     </div>
+    </div>
+
+    <div class="fixed w-full h-[8%] bg-black flex md:hidden bottom-0 z-10">
+
     </div>
 </header>
