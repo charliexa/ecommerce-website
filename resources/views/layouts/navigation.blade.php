@@ -9,6 +9,7 @@
     }
     .slider {
         background-image: url("http://localhost:8000/storage/images/bg-slider/background_slider.jpg");
+        background-size: cover;
         height: fit-content;
     }
 </style>
