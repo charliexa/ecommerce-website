@@ -13,13 +13,21 @@
     }
 </style>
 <div class="slider flex">
-    <marquee class="css2" direction="left">sold sold sold </marquee>
+    <marquee class="css2" direction="left">
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+        sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold sold
+    </marquee>
 </div>
 <header x-data="{
     mobileMenuOpen: false,
     cartItemsCount: {{ \App\Helpers\Cart::getCartItemsCount() }},
     mobileSearchOpen: false,
-}" @cart-change.window="cartItemsCount = $event.detail.count"
+    }" @cart-change.window="cartItemsCount = $event.detail.count"
     class="flex bg-neutral-800 shadow-md text-white items-center box-border">
     <div class="container flex items-center justify-between sm:px-5">
     <button @click="mobileSearchOpen = !mobileSearchOpen" class="flex text-xl md:hidden"><i class="fa-solid fa-magnifying-glass"></i></button>
