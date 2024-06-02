@@ -34,8 +34,8 @@
     <button @click="mobileSearchOpen = !mobileSearchOpen" class="flex text-xl md:hidden"><i class="fa-solid fa-magnifying-glass"></i></button>
     <!-- serachMenu -->
     <div
-        :class="mobileSearchOpen ? 'left-0' : '-left-[100%]'"
-        class="block fixed z-10 top-0 bottom-0 height h-full w-[80vw] transition-all bg-slate-900 md:hidden p-2"
+    class="-left-full block fixed z-10 top-0 bottom-0 height h-full w-[80vw] bg-slate-900 md:hidden p-2"
+    :class="mobileSearchOpen ? 'left-0' : '-left-[100%]'"
     >
         <div class="relative">
             <button @click="mobileSearchOpen = !mobileSearchOpen" class="absolute right-5 top-5">
@@ -64,8 +64,8 @@
     </div>
     <!-- Responsive Menu -->
     <div
+    class="-left-full block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
         :class="mobileMenuOpen ? 'left-0' : '-left-[220px]'"
-        class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
     >
         <ul>
             <li>
