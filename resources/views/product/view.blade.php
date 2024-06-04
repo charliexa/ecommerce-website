@@ -1,64 +1,8 @@
 <x-app-layout>
-    {{-- <div x-data="productItem({{ json_encode([
-        'id' => $product->id,
-        'slug' => $product->slug,
-        'image' => $product->image,
-        'title' => $product->title,
-        'price' => $product->price,
-        'addToCartUrl' => route('cart.add', $product),
-    ]) }})" class="container mx-auto">
-        <div class="grid gap-6 grid-cols-1 lg:grid-cols-5">
-            <div class="lg:col-span-3">
-                <div x-data="{
-                    images: ['{{ $product->image }}'],
-                    activeImage: null,
-                    prev() {
-                        let index = this.images.indexOf(this.activeImage);
-                        if (index === 0)
-                            index = this.images.length;
-                        this.activeImage = this.images[index - 1];
-                    },
-                    next() {
-                        let index = this.images.indexOf(this.activeImage);
-                        if (index === this.images.length - 1)
-                            index = -1;
-                        this.activeImage = this.images[index + 1];
-                    },
-                    init() {
-                        this.activeImage = this.images.length > 0 ? this.images[0] : null
-                    }
-                }">
-                    <div class="relative">
-                        <template x-for="image in images">
-                            <div x-show="activeImage === image" class="aspect-w-3 aspect-h-2">
-                                <img :src="image" alt="" class="w-auto mx-auto" />
-                            </div>
-                        </template>
-                        <a @click.prevent="prev"
-                            class="cursor-pointer bg-black/30 text-white absolute left-0 top-1/2 -translate-y-1/2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </a>
-                        <a @click.prevent="next"
-                            class="cursor-pointer bg-black/30 text-white absolute right-0 top-1/2 -translate-y-1/2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="flex">
-                        <template x-for="image in images">
-                            <a @click.prevent="activeImage = image"
-                                class="cursor-pointer w-[80px] h-[80px] border border-gray-300 hover:border-purple-500 flex items-center justify-center"
-                                :class="{ 'border-purple-600': activeImage === image }">
-                                <img :src="image" alt="" class="w-auto max-auto max-h-full" />
-                            </a>
-                        </template>
-                    </div>
-                </div>
+    <div class="container mx-auto px-4">
+        <div class="row gap-4 flex flex-col lg:flex-row">
+            <div class="col text-center flex-1">
+                <img src="{{ $product->image }}" alt="{{ $product->title }}" class="max-w-full h-auto">
             </div>
             <div class="lg:col-span-2">
                 <h1 class="text-lg font-semibold">
@@ -96,14 +40,14 @@
     </div> --}}
     <div class="container">
         <div class="row gap-4">
-            <div class="col-xs-12 col-sm-12 col-md text-center">
+            <div class="col text-center">
                 <img src="{{ $product->image }}" alt="{{ $product->title }}">
             </div>
-            <div class="col-xs-12 col-sm-12 col-md gap-3 d-flex flex-column fs-6 text-gray-600">
+            <div class="col gap-3 d-flex flex-column fs-6 text-gray-600">
                 <div class="ProdTitle text-black">
                     <h1 class="font-bold fs-4">(Product 21) Sample - Computers & Accessories For Sale</h1>
                 </div>
-                <div class="descSection gap-2 d-flex flex-column ">
+                <div class="descSection gap-2 d-flex flex-column">
                     <div class="description">Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud
                         felis. Pellentesque diam dolor, elementum etos lobortis...</div>
                     <div>Vendor: Ella - Halothemes<br>
@@ -112,17 +56,13 @@
                     </div>
                 </div>
                 <div class="price fw-bolder fs-4 text-black">
-                    {{-- IF THE PRICE IS THE SAME AS THE ORIGINAL::::: --}}
-                    {{-- <div class="price-last">${{ $product->price }}</div> --}}
-                    {{-- IF THE PRICE IS ON SALE:::::::... --}}
                     <div class="price-compare flex gap-2">
                         <dd class="price-original">${{ $product->price }}</dd>
                         <div class="price-last">${{ $product->price }}</div>
                     </div>
                 </div>
-                {{-- YOU SHOULD ADD AN IF STATMENT PROVVIDED WITH A VARIABLE FROM THE CONTROLLER  --}}
                 <div class="warning text-danger fw-bold">Please hurry! Only 8 left in stock</div>
-                <div class="size ">
+                <div class="size">
                     <p class="mb-2 text-black"><strong class=" ">Size:</strong> XS</p>
                     <div class="SizeContai d-flex flex-row gap-2">
                         <div class="border p-1 w-8 text-center border-black text-black cursor-pointer">XS</div>
@@ -134,42 +74,26 @@
                 <div class="color">
                     <p class="mb-2 text-black"><strong class=" ">Color:</strong> Black</p>
                     <div class="SizeContai d-flex flex-row gap-2">
-                        <div
-                            class="border-4 p-1 w-10 h-10 text-center border-white text-black rounded-5 bg-danger outline outline-1">
-                        </div>
-                        <div
-                            class="border-4 p-1 w-10 h-10 text-center border-white text-black rounded-5 bg-danger outline outline-1">
-                        </div>
-                        <div
-                            class="border-4 p-1 w-10 h-10 text-center border-white text-black rounded-5 bg-danger outline outline-1">
-                        </div>
-                        <div
-                            class="border-4 p-1 w-10 h-10 text-center border-white text-black rounded-5 bg-danger outline outline-1">
-                        </div>
+                        <div class="border-4 p-1 w-10 h-10 text-center border-white text-black rounded-5 bg-danger outline outline-1"></div>
+                        <div class="border-4 p-1 w-10 h-10 text-center border-white text-black rounded-5 bg-danger outline outline-1"></div>
+                        <div class="border-4 p-1 w-10 h-10 text-center border-white text-black rounded-5 bg-danger outline outline-1"></div>
+                        <div class="border-4 p-1 w-10 h-10 text-center border-white text-black rounded-5 bg-danger outline outline-1"></div>
                     </div>
                 </div>
                 <div class="flex items-center mb-5 text-black">
-                    <label for="quantity" class="block font-bold mr-4">
-                        Quantity:
-                    </label>
+                    <label for="quantity" class="block font-bold mr-4">Quantity:</label>
                     <input type="number" name="quantity" x-ref="quantityEl" value="1" min="1"
-                        class="w-32 focus:border-purple-500 focus:outline-none rounded" />
+                        class="w-32 focus:border-purple-500 focus:outline-none rounded">
                 </div>
                 <div class="flex flex-row align-items-center justify-center gap-3 mr-4">
-                    <button class="btn bg-dark py-2 text-white fs-4 flex justify-center min-w-0 w-full rounded-5 ">
-                        Add to Cart
-                    </button>
+                    <button class="btn bg-dark py-2 text-white fs-4 flex justify-center min-w-0 w-full rounded-5">Add to Cart</button>
                     <div class="border-1 flex items-center justify-center p-2 text-center border-gray-300 text-gray-400 rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                            fill="none" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" class=""
-                            stroke-linejoin="round">
-                            <path
-                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                            </path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                         </svg>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
