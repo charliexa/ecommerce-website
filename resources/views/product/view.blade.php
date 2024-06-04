@@ -96,10 +96,10 @@
     </div> --}}
     <div class="container">
         <div class="row gap-4">
-            <div class="col text-center">
+            <div class="col-xs-12 col-sm-12 col-md text-center">
                 <img src="{{ $product->image }}" alt="{{ $product->title }}">
             </div>
-            <div class="col gap-3 d-flex flex-column fs-6 text-gray-600">
+            <div class="col-xs-12 col-sm-12 col-md gap-3 d-flex flex-column fs-6 text-gray-600">
                 <div class="ProdTitle text-black">
                     <h1 class="font-bold fs-4">(Product 21) Sample - Computers & Accessories For Sale</h1>
                 </div>
